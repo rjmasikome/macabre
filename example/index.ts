@@ -1,6 +1,6 @@
 "use strict";
 
-import { Macabre } from "../src/Macabre";
+import { Macabre } from "../lib/Macabre";
 
 const config: any = {
   url: "https://coinmarketcap.com/",
