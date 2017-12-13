@@ -1,7 +1,7 @@
 {
   "name": "macabre",
   "description": "scraper based on puppeteer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "build/Macabre.js",
   "repository": {
     "type": "git",
@@ -35,7 +35,6 @@
     "lint:fix": "tslint --fix lib/ test/",
     "test": "mocha --exit --require ts-node/register 'test/**/*.ts'",
     "dev": "nodemon index.ts"
-
   },
   "dependencies": {
     "mongodb": "^3.0.0-rc0",
@@ -54,4 +53,3 @@
     "typescript": "^2.6.2"
   }
 }
-
