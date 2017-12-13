@@ -44,10 +44,6 @@ export class Macabre {
       this.close();
     });
 
-    process.on("exit", () => {
-      this.close();
-    });
-
     this.browser = browser;
     this.page = page;
     this.get = this.getResources();
@@ -160,13 +156,14 @@ _initDB() {
 
   close() {
 
+    debug("Closing...");
     if (this.browser) {
-        this.browser.close();
-      }
-
+      this.browser.close();
+    }
     if (this.dbClient) {
       this.dbClient.close();
     }
+    process.exit();
 
   }
 }
