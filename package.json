@@ -1,0 +1,57 @@
+{
+  "name": "macabre",
+  "description": "scraper based on puppeteer",
+  "version": "0.2.0",
+  "main": "build/Macabre.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjmasikome/macabre.git"
+  },
+  "keywords": [
+    "scraper",
+    "puppeteer",
+    "mongo"
+  ],
+  "author": {
+    "name": "rjmasikome",
+    "email": "rjmasikome@gmail.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rjmasikome/macabre/issues"
+  },
+  "homepage": "https://github.com/rjmasikome/macabre#readme",
+  "directories": {
+    "test": "test/"
+  },
+  "scripts": {
+    "start": "ts-node example/",
+    "build": "npm run compile",
+    "clean": "rm -rf build",
+    "precompile": "npm run clean",
+    "compile": "tsc --pretty",
+    "lint": "tslint lib/ test/",
+    "lint:fix": "tslint --fix lib/ test/",
+    "test": "mocha --exit --require ts-node/register 'test/**/*.ts'",
+    "dev": "nodemon index.ts"
+
+  },
+  "dependencies": {
+    "mongodb": "^3.0.0-rc0",
+    "mysql2": "^1.5.1",
+    "puppeteer": "^0.13.0",
+    "sequelize": "^4.28.0",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.53",
+    "eslint": "^4.12.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  }
+}
+
